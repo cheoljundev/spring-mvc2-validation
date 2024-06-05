@@ -52,10 +52,10 @@ public class ValidationItemControllerV1 {
         if (!StringUtils.hasText(item.getItemName())) {
             errors.put("itemName", "상품 이름은 필수입니다.");
         }
-        if (item.getPrice() == null | item.getPrice() < 1000 | item.getPrice() > 1000000) {
+        if (item.getPrice() == null || item.getPrice() < 1000 || item.getPrice() > 1000000) {
             errors.put("price", "가격은 1,000 ~ 1,000,000원까지 허용합니다.");
         }
-        if (item.getQuantity() == null | item.getQuantity() >= 9999) {
+        if (item.getQuantity() == null || item.getQuantity() >= 9999) {
             errors.put("quantity", "수량은 최대 9,999까지 허용합니다.");
         }
 
