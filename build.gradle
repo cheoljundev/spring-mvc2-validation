@@ -27,6 +27,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	/* JDK 8부터 14까지는 JavaScript를 지원하는 Nashorn 엔진을 쓰지만, JDK 14 이후부터는 JavaScript가 지원되지 않는 GraalVM을 사용하기 때문 */
+	implementation 'org.openjdk.nashorn:nashorn-core:15.3'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
