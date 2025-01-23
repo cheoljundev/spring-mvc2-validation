@@ -1,6 +1,5 @@
 package hello.itemservice.web.validation.form;
 
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -16,9 +15,8 @@ public class ItemUpdateForm {
     private String itemName;
 
     @NotNull
-    @Range(min = 1000, max = 1000000)
+    @Range(max = 1000000, min = 1000)
     private Integer price;
 
     private Integer quantity;
-
 }
