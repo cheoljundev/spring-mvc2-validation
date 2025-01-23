@@ -13,8 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/validation/api/items")
 public class ValidationItemApiController {
+
     @PostMapping("/add")
-    public Object addItem(@RequestBody @Validated ItemSaveForm form, BindingResult bindingResult) {
+    public Object addItem(@Validated @RequestBody ItemSaveForm form, BindingResult bindingResult) {
         log.info("API 컨트롤러 호출");
 
         if (bindingResult.hasErrors()) {
